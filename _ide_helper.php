@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.7.28 on 2019-03-19 02:29:40.
+ * Generated for Laravel 5.7.28 on 2019-03-19 02:33:04.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -11362,6 +11362,28 @@ namespace Illuminate\Support\Facades {
                         /** @var \Illuminate\Routing\Router $instance */
                         return $instance->macroCall($method, $parameters);
         }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function widget($url, $widget, $name = null)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->__invoke($url, $widget, $name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function jsonWidget($url, $widget, $name = null)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->__invoke($url, $widget, $name);
+        }
          
     }
 
@@ -14982,6 +15004,498 @@ namespace Barryvdh\Debugbar {
  
 }
 
+namespace Barryvdh\DomPDF { 
+
+    /**
+     * 
+     *
+     */ 
+    class Facade {
+        
+        /**
+         * Get the DomPDF instance
+         *
+         * @return \Barryvdh\DomPDF\Dompdf 
+         * @static 
+         */ 
+        public static function getDomPDF()
+        {
+                        /** @var \Barryvdh\DomPDF\PDF $instance */
+                        return $instance->getDomPDF();
+        }
+        
+        /**
+         * Set the paper size (default A4)
+         *
+         * @param string $paper
+         * @param string $orientation
+         * @return \Barryvdh\DomPDF\PDF 
+         * @static 
+         */ 
+        public static function setPaper($paper, $orientation = 'portrait')
+        {
+                        /** @var \Barryvdh\DomPDF\PDF $instance */
+                        return $instance->setPaper($paper, $orientation);
+        }
+        
+        /**
+         * Show or hide warnings
+         *
+         * @param bool $warnings
+         * @return \Barryvdh\DomPDF\PDF 
+         * @static 
+         */ 
+        public static function setWarnings($warnings)
+        {
+                        /** @var \Barryvdh\DomPDF\PDF $instance */
+                        return $instance->setWarnings($warnings);
+        }
+        
+        /**
+         * Load a HTML string
+         *
+         * @param string $string
+         * @param string $encoding Not used yet
+         * @return static 
+         * @static 
+         */ 
+        public static function loadHTML($string, $encoding = null)
+        {
+                        /** @var \Barryvdh\DomPDF\PDF $instance */
+                        return $instance->loadHTML($string, $encoding);
+        }
+        
+        /**
+         * Load a HTML file
+         *
+         * @param string $file
+         * @return static 
+         * @static 
+         */ 
+        public static function loadFile($file)
+        {
+                        /** @var \Barryvdh\DomPDF\PDF $instance */
+                        return $instance->loadFile($file);
+        }
+        
+        /**
+         * Load a View and convert to HTML
+         *
+         * @param string $view
+         * @param array $data
+         * @param array $mergeData
+         * @param string $encoding Not used yet
+         * @return static 
+         * @static 
+         */ 
+        public static function loadView($view, $data = array(), $mergeData = array(), $encoding = null)
+        {
+                        /** @var \Barryvdh\DomPDF\PDF $instance */
+                        return $instance->loadView($view, $data, $mergeData, $encoding);
+        }
+        
+        /**
+         * Set/Change an option in DomPdf
+         *
+         * @param array $options
+         * @return static 
+         * @static 
+         */ 
+        public static function setOptions($options)
+        {
+                        /** @var \Barryvdh\DomPDF\PDF $instance */
+                        return $instance->setOptions($options);
+        }
+        
+        /**
+         * Output the PDF as a string.
+         *
+         * @return string The rendered PDF as string
+         * @static 
+         */ 
+        public static function output()
+        {
+                        /** @var \Barryvdh\DomPDF\PDF $instance */
+                        return $instance->output();
+        }
+        
+        /**
+         * Save the PDF to a file
+         *
+         * @param $filename
+         * @return static 
+         * @static 
+         */ 
+        public static function save($filename)
+        {
+                        /** @var \Barryvdh\DomPDF\PDF $instance */
+                        return $instance->save($filename);
+        }
+        
+        /**
+         * Make the PDF downloadable by the user
+         *
+         * @param string $filename
+         * @return \Illuminate\Http\Response 
+         * @static 
+         */ 
+        public static function download($filename = 'document.pdf')
+        {
+                        /** @var \Barryvdh\DomPDF\PDF $instance */
+                        return $instance->download($filename);
+        }
+        
+        /**
+         * Return a response with the PDF to show in the browser
+         *
+         * @param string $filename
+         * @return \Illuminate\Http\Response 
+         * @static 
+         */ 
+        public static function stream($filename = 'document.pdf')
+        {
+                        /** @var \Barryvdh\DomPDF\PDF $instance */
+                        return $instance->stream($filename);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setEncryption($password)
+        {
+                        /** @var \Barryvdh\DomPDF\PDF $instance */
+                        return $instance->setEncryption($password);
+        }
+         
+    }
+ 
+}
+
+namespace Intervention\Image\Facades { 
+
+    /**
+     * 
+     *
+     */ 
+    class Image {
+        
+        /**
+         * Overrides configuration settings
+         *
+         * @param array $config
+         * @return self 
+         * @static 
+         */ 
+        public static function configure($config = array())
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->configure($config);
+        }
+        
+        /**
+         * Initiates an Image instance from different input types
+         *
+         * @param mixed $data
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function make($data)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->make($data);
+        }
+        
+        /**
+         * Creates an empty image canvas
+         *
+         * @param int $width
+         * @param int $height
+         * @param mixed $background
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function canvas($width, $height, $background = null)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->canvas($width, $height, $background);
+        }
+        
+        /**
+         * Create new cached image and run callback
+         * (requires additional package intervention/imagecache)
+         *
+         * @param \Closure $callback
+         * @param int $lifetime
+         * @param boolean $returnObj
+         * @return \Image 
+         * @static 
+         */ 
+        public static function cache($callback, $lifetime = null, $returnObj = false)
+        {
+                        /** @var \Intervention\Image\ImageManager $instance */
+                        return $instance->cache($callback, $lifetime, $returnObj);
+        }
+         
+    }
+ 
+}
+
+namespace Maatwebsite\Excel\Facades { 
+
+    /**
+     * LaravelExcel Facade
+     *
+     * @category Laravel Excel
+     * @version 1.0.0
+     * @package maatwebsite/excel
+     * @copyright Copyright (c) 2013 - 2014 Maatwebsite (http://www.maatwebsite.nl)
+     * @author Maatwebsite <info@maatwebsite.nl>
+     * @license http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
+     */ 
+    class Excel {
+        
+        /**
+         * Create a new file
+         *
+         * @param $filename
+         * @param callable|null $callback
+         * @return \Maatwebsite\Excel\LaravelExcelWriter 
+         * @static 
+         */ 
+        public static function create($filename, $callback = null)
+        {
+                        /** @var \Maatwebsite\Excel\Excel $instance */
+                        return $instance->create($filename, $callback);
+        }
+        
+        /**
+         * Load an existing file
+         *
+         * @param string $file The file we want to load
+         * @param callback|null $callback
+         * @param string|null $encoding
+         * @param bool $noBasePath
+         * @param callback|null $callbackConfigReader
+         * @return \Maatwebsite\Excel\LaravelExcelReader 
+         * @static 
+         */ 
+        public static function load($file, $callback = null, $encoding = null, $noBasePath = false, $callbackConfigReader = null)
+        {
+                        /** @var \Maatwebsite\Excel\Excel $instance */
+                        return $instance->load($file, $callback, $encoding, $noBasePath, $callbackConfigReader);
+        }
+        
+        /**
+         * Set select sheets
+         *
+         * @param $sheets
+         * @return \Maatwebsite\Excel\LaravelExcelReader 
+         * @static 
+         */ 
+        public static function selectSheets($sheets = array())
+        {
+                        /** @var \Maatwebsite\Excel\Excel $instance */
+                        return $instance->selectSheets($sheets);
+        }
+        
+        /**
+         * Select sheets by index
+         *
+         * @param array $sheets
+         * @return \Maatwebsite\Excel\Excel 
+         * @static 
+         */ 
+        public static function selectSheetsByIndex($sheets = array())
+        {
+                        /** @var \Maatwebsite\Excel\Excel $instance */
+                        return $instance->selectSheetsByIndex($sheets);
+        }
+        
+        /**
+         * Batch import
+         *
+         * @param $files
+         * @param callback $callback
+         * @return \PHPExcel 
+         * @static 
+         */ 
+        public static function batch($files, $callback)
+        {
+                        /** @var \Maatwebsite\Excel\Excel $instance */
+                        return $instance->batch($files, $callback);
+        }
+        
+        /**
+         * Create a new file and share a view
+         *
+         * @param string $view
+         * @param array $data
+         * @param array $mergeData
+         * @return \Maatwebsite\Excel\LaravelExcelWriter 
+         * @static 
+         */ 
+        public static function shareView($view, $data = array(), $mergeData = array())
+        {
+                        /** @var \Maatwebsite\Excel\Excel $instance */
+                        return $instance->shareView($view, $data, $mergeData);
+        }
+        
+        /**
+         * Create a new file and load a view
+         *
+         * @param string $view
+         * @param array $data
+         * @param array $mergeData
+         * @return \Maatwebsite\Excel\LaravelExcelWriter 
+         * @static 
+         */ 
+        public static function loadView($view, $data = array(), $mergeData = array())
+        {
+                        /** @var \Maatwebsite\Excel\Excel $instance */
+                        return $instance->loadView($view, $data, $mergeData);
+        }
+        
+        /**
+         * Set filters
+         *
+         * @param array $filters
+         * @return \Excel 
+         * @static 
+         */ 
+        public static function registerFilters($filters = array())
+        {
+                        /** @var \Maatwebsite\Excel\Excel $instance */
+                        return $instance->registerFilters($filters);
+        }
+        
+        /**
+         * Enable certain filters
+         *
+         * @param string|array $filter
+         * @param bool|false|string $class
+         * @return \Excel 
+         * @static 
+         */ 
+        public static function filter($filter, $class = false)
+        {
+                        /** @var \Maatwebsite\Excel\Excel $instance */
+                        return $instance->filter($filter, $class);
+        }
+        
+        /**
+         * Get register, enabled (or both) filters
+         *
+         * @param string|boolean $key [description]
+         * @return array 
+         * @static 
+         */ 
+        public static function getFilters($key = false)
+        {
+                        /** @var \Maatwebsite\Excel\Excel $instance */
+                        return $instance->getFilters($key);
+        }
+         
+    }
+ 
+}
+
+namespace Imanghafoori\HeyMan\Facades { 
+
+    /**
+     * Class HeyMan.
+     *
+     * @method static YouShouldHave whenYouFetch(array|Model $model)
+     * @method static YouShouldHave whenYouCreate(array|Model $model)
+     * @method static YouShouldHave whenYouUpdate(array|Model $model)
+     * @method static YouShouldHave whenYouSave(array|Model $model)
+     * @method static YouShouldHave whenYouDelete(array|Model $model)
+     * @method static YouShouldHave whenYouVisitUrl(array|sting $url)
+     * @method static YouShouldHave whenYouSendGet(array|sting $url)
+     * @method static YouShouldHave whenYouSendPost(array|sting $url)
+     * @method static YouShouldHave whenYouSendPut(array|sting $url)
+     * @method static YouShouldHave whenYouSendPatch(array|sting $url)
+     * @method static YouShouldHave whenYouSendDelete(array|sting $url)
+     * @method static YouShouldHave whenYouHitRouteName(array|sting $routeName)
+     * @method static YouShouldHave whenYouCallAction(array|sting $action)
+     * @method static YouShouldHave whenYouMakeView(array|sting $view)
+     * @method static YouShouldHave whenEventHappens(array|sting $event)
+     * @method static YouShouldHave whenYouReachCheckPoint(array|sting $event)
+     * @see \Imanghafoori\HeyMan\HeyMan
+     */ 
+    class HeyMan {
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function forget()
+        {
+                        /** @var \Imanghafoori\HeyMan\HeyMan $instance */
+                        return $instance->forget();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function makeSure($testCase)
+        {
+                        /** @var \Imanghafoori\HeyMan\HeyMan $instance */
+                        return $instance->makeSure($testCase);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function checkPoint($pointName)
+        {
+                        /** @var \Imanghafoori\HeyMan\HeyMan $instance */
+                        return $instance->checkPoint($pointName);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function condition($name, $callable)
+        {
+                        /** @var \Imanghafoori\HeyMan\HeyMan $instance */
+                        return $instance->condition($name, $callable);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function turnOff()
+        {
+                        /** @var \Imanghafoori\HeyMan\HeyMan $instance */
+                        return $instance->turnOff();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function turnOn()
+        {
+                        /** @var \Imanghafoori\HeyMan\HeyMan $instance */
+                        return $instance->turnOn();
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -17591,6 +18105,14 @@ namespace  {
     class View extends \Illuminate\Support\Facades\View {}
 
     class Debugbar extends \Barryvdh\Debugbar\Facade {}
+
+    class PDF extends \Barryvdh\DomPDF\Facade {}
+
+    class Image extends \Intervention\Image\Facades\Image {}
+
+    class Excel extends \Maatwebsite\Excel\Facades\Excel {}
+
+    class HeyMan extends \Imanghafoori\HeyMan\Facades\HeyMan {}
  
 }
 
